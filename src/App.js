@@ -14,8 +14,6 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-
-
         <Switch>
           <Route path="/" exact component={Homepage} />
           <Route path="/contact" component={Contact} />
