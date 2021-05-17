@@ -16,6 +16,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Homepage} />
+          <Route path="/places" component={Contact} />
           <Route path="/contact" component={Contact} />
 
           <Redirect from="*" to="/" />
