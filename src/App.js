@@ -8,6 +8,7 @@ import './App.css';
 import Navbar from './Components/Navbar/Navbar'
 import Homepage from '../src/Pages/Homepage/Homepage'
 import Contact from './Pages/Contact/Contact'
+import Places from './Pages/Places/Places'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={Homepage} />
-          <Route path="/places" component={Contact} />
+          <Route path="/places" component={Places} />
           <Route path="/contact" component={Contact} />
 
           <Redirect from="*" to="/" />
