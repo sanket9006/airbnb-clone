@@ -6,8 +6,8 @@ import './App.css';
 
 // Importing React Components
 import Navbar from './Components/Navbar/Navbar'
-import Homepage from './Components/Homepage/Homepage'
-import Contact from './Components/Contact/Contact'
+import Homepage from '../src/Pages/Homepage/Homepage'
+import Contact from './Pages/Contact/Contact'
 
 function App() {
   return (
