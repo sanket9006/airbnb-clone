@@ -8,7 +8,7 @@ function HeroSection() {
     return (
         <div className='hero-container'>
             <video src={Video1} autoPlay loop muted />
-            <h1>ADVENTURE AWAITS</h1>
+            <h1>{process.env.REACT_APP_BASE_URL}</h1>
             <p>What are you waiting for?</p>
             <div className='hero-btns'>
                 <Button
