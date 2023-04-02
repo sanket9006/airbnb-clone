@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const Banner = () => {
+const AirbnbBanner = () => {
     return (
         <div className='relative h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px] bg-black'>
             <Image
@@ -16,4 +16,4 @@ const Banner = () => {
     )
 }
 
-export default Banner
+export default AirbnbBanner
