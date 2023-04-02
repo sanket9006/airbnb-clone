@@ -1,10 +1,13 @@
 import Head from 'next/head';
-// import Navbar from '@/components/navbar/Navbar';
-// import AirbnbBanner from '@/components/banner/AirbnbBanner';
-// import ExploreNearbyCard from '@/components/cards/ExploreNearbyCard';
+import { Inter } from 'next/font/google';
+import Navbar from '@/components/navbar/Navbar';
+import AirbnbBanner from '@/components/banner/AirbnbBanner';
+import ExploreNearbyCard from '@/components/cards/ExploreNearbyCard';
 
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home(props) {
+  console.log(props);
   return (
     <>
       <Head>
@@ -13,31 +16,31 @@ export default function Home(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Navbar /> */}
-      {/* <AirbnbBanner /> */}
+      <Navbar />
+      <AirbnbBanner />
 
       <main className="max-w-7xl mx-auto">
-        {/* <section className='mb-4'>
+        <section className='mb-4'>
           <h2 className="text-4xl font-semibold mt-2 mb-6">Explore nearby</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {props.smallCardsData.map((place) => (
               <ExploreNearbyCard key={place.img} data={place} />
             ))}
           </div>
-        </section> */}
+        </section>
       </main>
     </>
   );
 }
 
-// export const getStaticProps = async () => {
-//   const smallCardsData = await fetch('https://www.jsonkeeper.com/b/4G1G').then((response) =>
-//     response.json()
-//   );
+export const getStaticProps = async () => {
+  const smallCardsData = await fetch('https://www.jsonkeeper.com/b/4G1G').then((response) =>
+    response.json()
+  );
 
-//   return {
-//     props: {
-//       smallCardsData,
-//     },
-//   };
-// };
+  return {
+    props: {
+      smallCardsData,
+    },
+  };
+};
