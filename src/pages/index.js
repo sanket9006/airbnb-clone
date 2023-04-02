@@ -30,14 +30,14 @@ export default function Home(props) {
   );
 }
 
-export const getStaticProps = async () => {
-  const smallCardsData = await fetch('https://www.jsonkeeper.com/b/4G1G').then((response) =>
-    response.json()
-  );
+// export const getStaticProps = async () => {
+//   const smallCardsData = await fetch('https://www.jsonkeeper.com/b/4G1G').then((response) =>
+//     response.json()
+//   );
 
-  return {
-    props: {
-      smallCardsData,
-    },
-  };
-};
+//   return {
+//     props: {
+//       smallCardsData,
+//     },
+//   };
+// };
