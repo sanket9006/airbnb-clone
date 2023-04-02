@@ -24,7 +24,7 @@ export default function Home(props) {
           <h2 className="text-4xl font-semibold mt-2 mb-6">Explore nearby</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {props.smallCardsData.map((place) => (
-              <Smallcards data={place} />
+              <Smallcards key={data.img} data={place} />
             ))}
           </div>
         </section>
