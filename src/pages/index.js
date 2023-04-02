@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
 // import AirbnbBanner from '@/components/banner/AirbnbBanner';
-import ExploreNearbyCard from '@/components/cards/ExploreNearbyCard';
+// import ExploreNearbyCard from '@/components/cards/ExploreNearbyCard';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,14 +20,14 @@ export default function Home(props) {
       {/* <AirbnbBanner /> */}
 
       <main className="max-w-7xl mx-auto">
-        <section className='mb-4'>
+        {/* <section className='mb-4'>
           <h2 className="text-4xl font-semibold mt-2 mb-6">Explore nearby</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {props.smallCardsData.map((place) => (
               <ExploreNearbyCard key={place.img} data={place} />
             ))}
           </div>
-        </section>
+        </section> */}
       </main>
     </>
   );
