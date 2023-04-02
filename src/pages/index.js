@@ -20,11 +20,13 @@ export default function Home(props) {
       <Banner />
 
       <main className="max-w-7xl mx-auto">
-        <section>
-          <h2 className="text-4xl font-semibold mt-2 mb-3">Explore nearby</h2>
-          {props.smallCardsData.map((place) => (
-            <Smallcards data={place} />
-          ))}
+        <section className='mb-4'>
+          <h2 className="text-4xl font-semibold mt-2 mb-6">Explore nearby</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {props.smallCardsData.map((place) => (
+              <Smallcards data={place} />
+            ))}
+          </div>
         </section>
       </main>
     </>
