@@ -7,10 +7,11 @@ const AirbnbBanner = () => {
             <Image
                 src="https://picsum.photos/1980/1072"
                 fill
+                alt="BannerImage"
             />
             <div className='absolute w-full text-center top-1/2'>
                 <p>Not sure where to go ? perfact</p>
-                <button className='bg-white text-purple-500 px-7 py-4 mt-2 rounded-full shadow-md hover:shadow-xl transition duration-150 active:scale-90'>I'm flexible</button>
+                <button className='bg-white text-purple-500 px-7 py-4 mt-2 rounded-full shadow-md hover:shadow-xl transition duration-150 active:scale-90'>I&apos;m flexible</button>
             </div>
         </div>
     )

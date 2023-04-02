@@ -5,7 +5,7 @@ const ExploreNearbyCard = ({ data }) => {
     return (
         <div className='flex space-x-4 mb-4 hover:scale-105 transition duration-150 ease-out cursor-pointer'>
             <div className='relative w-16 h-16'>
-                <Image className='rounded-lg' src={data.img} fill></Image>
+                <Image className='rounded-lg' src={data.img} fill alt="placeToExplore"></Image>
             </div>
 
             <div>

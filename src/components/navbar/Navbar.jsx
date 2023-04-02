@@ -7,7 +7,7 @@ const Navbar = () => {
         <header className='bg-white grid grid-cols-3 shadow-md p-3 sticky top-0 z-50'>
             {/* Left */}
             <div className='px-2'>
-                <Image src="https://1000logos.net/wp-content/uploads/2017/08/Airbnb-logo.jpg" height={100} width={100} />
+                <Image src="https://1000logos.net/wp-content/uploads/2017/08/Airbnb-logo.jpg" alt="logo" height={100} width={100} />
             </div>
 
             {/* Middle */}
