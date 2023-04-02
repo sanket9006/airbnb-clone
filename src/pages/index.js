@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
-import AirbnbBanner from '@/components/banner/AirbnbBanner';
+// import AirbnbBanner from '@/components/banner/AirbnbBanner';
 import ExploreNearbyCard from '@/components/cards/ExploreNearbyCard';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -17,7 +17,7 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <AirbnbBanner />
+      {/* <AirbnbBanner /> */}
 
       <main className="max-w-7xl mx-auto">
         <section className='mb-4'>
