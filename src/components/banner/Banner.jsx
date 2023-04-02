@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div className='relative h-[300px] md:h-[500px] lg:h-[600px] xl:h-[700px] bg-black'>
             <Image
-                src="https://picsum.photos/1980/1080"
+                src="https://picsum.photos/1980/1072"
                 fill
             />
             <div className='absolute w-full text-center top-1/2'>
