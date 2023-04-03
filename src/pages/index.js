@@ -32,7 +32,7 @@ export default function Home(props) {
 
         <section className="px-8 mb-6">
           <h2 className="text-4xl font-semibold mt-2 mb-6">Explore nearby</h2>
-          <div className="flex overflow-scroll space-x-4 p-3">
+          <div className="flex overflow-scroll scrollbar-hide space-x-4 p-3">
             {props.mediumCardsData.map((place) => (
               <Bigcards key={place.img} img={place.img} title={place.title} />
             ))}
