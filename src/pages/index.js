@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
 import AirbnbBanner from '@/components/banner/AirbnbBanner';
 import ExploreNearbyCard from '@/components/cards/ExploreNearbyCard';
+import Bigcards from '@/components/cards/Bigcards';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,12 +20,21 @@ export default function Home(props) {
       <Navbar />
       <AirbnbBanner />
 
-      <main className="max-w-7xl mx-auto">
-        <section className='mb-4'>
+      <main className="max-w-7xl mx-auto mt-6">
+        <section className="px-8 mb-6">
           <h2 className="text-4xl font-semibold mt-2 mb-6">Explore nearby</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {props.smallCardsData.map((place) => (
               <ExploreNearbyCard key={place.img} data={place} />
+            ))}
+          </div>
+        </section>
+
+        <section className="px-8 mb-6">
+          <h2 className="text-4xl font-semibold mt-2 mb-6">Explore nearby</h2>
+          <div className="flex overflow-scroll space-x-4 p-3">
+            {props.mediumCardsData.map((place) => (
+              <Bigcards key={place.img} img={place.img} title={place.title} />
             ))}
           </div>
         </section>
@@ -38,9 +48,14 @@ export const getStaticProps = async () => {
     response.json()
   );
 
+  const mediumCardsData = await fetch('https://www.jsonkeeper.com/b/VHHT').then((response) =>
+    response.json()
+  );
+
   return {
     props: {
       smallCardsData,
+      mediumCardsData,
     },
   };
 };
