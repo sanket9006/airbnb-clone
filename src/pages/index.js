@@ -2,8 +2,9 @@ import Head from 'next/head';
 import { Inter } from 'next/font/google';
 import Navbar from '@/components/navbar/Navbar';
 import AirbnbBanner from '@/components/banner/AirbnbBanner';
-import ExploreNearbyCard from '@/components/cards/ExploreNearbyCard';
-import Bigcards from '@/components/cards/Bigcards';
+import SmallCard from '@/components/cards/SmallCard';
+import BigCard from '@/components/cards/BigCard';
+import LargeCard from '@/components/cards/LargeCard';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,19 +26,27 @@ export default function Home(props) {
           <h2 className="text-4xl font-semibold mt-2 mb-6">Explore nearby</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {props.smallCardsData.map((place) => (
-              <ExploreNearbyCard key={place.img} data={place} />
+              <SmallCard key={place.img} data={place} />
             ))}
           </div>
         </section>
 
         <section className="px-8 mb-6">
           <h2 className="text-4xl font-semibold mt-2 mb-6">Explore nearby</h2>
-          <div className="flex overflow-scroll scrollbar-hide space-x-4 p-3">
+          <div className="flex overflow-scroll scrollbar-hide space-x-4 p-3 -m-3">
             {props.mediumCardsData.map((place) => (
-              <Bigcards key={place.img} img={place.img} title={place.title} />
+              <BigCard key={place.img} img={place.img} title={place.title} />
             ))}
           </div>
         </section>
+
+        <LargeCard
+          img="https://links.papareact.com/4cj"
+          title="The Greatest Outdoors"
+          description="Wishlist curated by Airbnb"
+          buttonText="Get Inspired"
+        />
+
       </main>
     </>
   );

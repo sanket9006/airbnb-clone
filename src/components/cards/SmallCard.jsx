@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const ExploreNearbyCard = ({ data }) => {
+const SmallCard = ({ data }) => {
     return (
         <div className='flex space-x-4 mb-4 hover:scale-105 transition duration-150 ease-out cursor-pointer'>
             <div className='relative w-16 h-16'>
@@ -17,4 +17,4 @@ const ExploreNearbyCard = ({ data }) => {
     )
 }
 
-export default ExploreNearbyCard
+export default SmallCard
